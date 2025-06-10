@@ -59,7 +59,7 @@ const page = () => {
 
      <WhyChoose services={services}/>
     </div>
-    <p className='text-lg place-self-center'>We'll handle all your tax and accounting needs, so you can focus on your business.</p>
+    <p className='text-lg place-self-center'>We&apos; ll handle all your tax and accounting needs, so you can focus on your business.</p>
     </div>
   )
 }

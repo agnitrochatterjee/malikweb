@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { Poppins } from "next/font/google";
 
@@ -32,7 +31,7 @@ const Navbar = () => {
             height={100}
         />
         <ul className="flex gap-[40px] text-sm">
-          {NavBarItems.map((item, ind) => (
+          {NavBarItems.map((item) => (
             <li
               key={item.path}
               onClick={() => Router.push(`${item.path}`)}

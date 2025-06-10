@@ -52,7 +52,7 @@ const ContactSection = () => {
         <div className="flex-1">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">Get in Touch</h2>
           <p className="text-gray-600 mb-6">
-            Looking for help with your tax return or payroll? Or maybe you're interested in full accounting services. Whatever you need, we’re here to help you get on with business.
+            Looking for help with your tax return or payroll? Or maybe you&apos;re interested in full accounting services. Whatever you need, we’re here to help you get on with business.
           </p>
 
           <div className="space-y-4 mb-6">

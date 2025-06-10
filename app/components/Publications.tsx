@@ -1,11 +1,12 @@
 
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 export interface PublicationProps {
   id: number;
   title: string;
   description: string;
-  image: any;
+  image: StaticImageData;
 }
 
 const Publication: React.FC<PublicationProps> = ({

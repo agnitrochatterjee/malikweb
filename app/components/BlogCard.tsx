@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface BlogCardProps {
   index: number;
-  image: any;
+  image: StaticImageData;
   title: string;
   description: string;
   buttonLabel: string;

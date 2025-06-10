@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div className={poppins.className}>
       <h1 className='text-5xl py-5 font-semibold place-self-center'>Contact Us</h1>
-      <p className='px-5 place-self center'>Curious about how we can help with your finances? Reach out to our team today. We specialize in SMSF management, business advisory, tax accounting, and more. No matter if you're an individual or a business, we offer customized solutions to fit your financial needs. Contact us by phone or email to begin your journey toward financial success.</p>
+      <p className='px-5 place-self center'>Curious about how we can help with your finances? Reach out to our team today. We specialize in SMSF management, business advisory, tax accounting, and more. No matter if you&apos;re an individual or a business, we offer customized solutions to fit your financial needs. Contact us by phone or email to begin your journey toward financial success.</p>
 
       {/* Form Content */}
       {/* <div className='px-5 py-10'>

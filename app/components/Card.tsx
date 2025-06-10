@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
 export interface CardProps {
   id: number;
   title: string;
   description: string;
-  image: any;
+  image: StaticImageData;
 }
 
 export default function Card({ id, title, description, image }: CardProps) {
