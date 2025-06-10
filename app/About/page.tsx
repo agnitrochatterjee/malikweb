@@ -38,7 +38,7 @@ const page = () => {
   return (
     <div className='p-5'>
       <div className={`overflow-hidden`}>
-    <h1 className='text-5xl place-self-center'>About Us</h1>
+    <h1 className='text-5xl font-base place-self-center'>About Us</h1>
     <p className='text-lg place-self-center mt-3'>Top quality accounting services for your business</p>
     <p className='text-lg px-10 mt-3'>With 10 years of experience, we work with companies of all sizes, and in all industries. We are dedicated to handling all tax issues swiftly and accurately, so that you can focus on what really matters to your business.</p>
 

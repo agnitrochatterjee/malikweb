@@ -56,7 +56,7 @@ const blogData = [
 export default function HomePage() {
   return (
     <div className="px-4 md:px-20 py-10">
-      <h2 className="text-center text-4xl font-semibold mb-10 text-black">Blog</h2>
+      <h2 className="text-center text-5xl font-base mb-10 text-black">Blog</h2>
       <div className="grid gap-6 md:grid-cols-3">
         {blogData.map((card, index) => (
   <BlogCard key={index} index={index} {...card} />
