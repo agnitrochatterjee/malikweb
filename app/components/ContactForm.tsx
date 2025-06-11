@@ -1,6 +1,5 @@
 import React from "react";
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import Image from "next/image";
 
 const ContactForm = () => {
   return (

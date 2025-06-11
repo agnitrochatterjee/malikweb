@@ -1,5 +1,4 @@
 import React from 'react'
-import { Poppins } from "next/font/google";
 import Card from '../components/Card';
 import CardImage1 from '../assets/CardImage1.jpg';
 import CardImage2 from '../assets/CardImage2.jpg';
@@ -9,11 +8,6 @@ import CardImage5 from '../assets/CardImage5.jpg';
 import CardImage6 from '../assets/CardImage6.jpg';
 import CardImage7 from '../assets/CardImage7.jpg';
 import CardImage8 from '../assets/CardImage8.jpg';
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
   const data=[
   {
