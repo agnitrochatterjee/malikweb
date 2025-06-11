@@ -54,7 +54,7 @@ const socialLinks = [
 // Main Footer Component
 const Footer = () => {
   return (
-    <div className={`w-screen relative z-0 ${poppins.className}`}>
+    <div className={`w-full relative z-0 ${poppins.className}`}>
       <footer className="bg-[#E9E9E9] text-black p-10 mt-12">
         <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="mb-4 lg:mb-0">

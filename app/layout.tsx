@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.className}>
       <body
-        className={`min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased bg-[#F4F4F4]`}
+        className={`antialiased bg-[#F4F4F4]`}
       >
         <Navbar />
         <main className="flex flex-grow">{children}</main>

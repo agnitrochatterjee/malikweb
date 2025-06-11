@@ -23,7 +23,7 @@ const Publication: React.FC<PublicationProps> = ({
         isEven ? "bg-[#B2DC18] text-white" : "bg-white text-black"
       } ${
         !isEven ? "md:flex-row-reverse" : ""
-      } rounded-2xl shadow w-full max-w-5xl mx-auto mb-10 p-6`}
+      } rounded-2xl shadow w-full max-w-6xl mx-auto mb-10 p-6`}
     >
       <div className="w-full md:w-1/2 flex items-center justify-center p-4">
         <div className="w-full h-auto rounded-xl overflow-hidden">
@@ -35,7 +35,7 @@ const Publication: React.FC<PublicationProps> = ({
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 flex flex-col justify-center p-4">
+      <div className="w-full md:w-1/2 flex-1 flex-col justify-center p-4">
         <h2 className="text-5xl mb-4">{title}</h2>
         <p className="mb-6 text-base">{description}</p>
       </div>

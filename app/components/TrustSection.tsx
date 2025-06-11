@@ -20,7 +20,7 @@ const features = [
 
 const TrustSection = () => {
   return (
-    <section className="bg-white py-12 px-6 md:px-16 lg:px-32">
+    <section className="py-12 px-6 md:px-16 lg:px-32">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="flex-shrink-0 w-full md:w-1/2 rounded-lg shadow-lg overflow-hidden">
           <Image

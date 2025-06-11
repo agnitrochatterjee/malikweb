@@ -5,7 +5,7 @@ import bannerImage from "../assets/Banner.jpg";
 
 export const Banner = () => {
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative min-w-screen h-[500px] overflow-auto">
       <Image
         src={bannerImage}
         alt="Banner Background"
@@ -22,7 +22,7 @@ export const Banner = () => {
         <p className="text-gray-300 mt-4 text-lg">
           Gold Coast&apos;s Trusted Accounting Experts
         </p>
-        <button className="mt-6 bg-[#B2DC18] text-black font-medium px-5 py-2 rounded w-[160px] h-[40px] text-[15px]">
+        <button className="mt-6 bg-[#B2DC18] text-black font-medium px-5 py-2 rounded w-[160px] h-[40px] text-[15px] cursor-pointer">
           Book a Meeting
         </button>
       </div>

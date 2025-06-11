@@ -19,7 +19,7 @@ export default function Card({ id, title, description, image }: CardProps) {
         isEven ? "bg-[#B2DC18] text-white" : "bg-white text-black"
       } ${
         !isEven ? "md:flex-row-reverse" : ""
-      } rounded-2xl shadow w-full max-w-5xl mx-auto mb-10 p-6`}
+      } rounded-2xl shadow w-full max-w-6xl mx-auto mb-10 p-6`}
     >
       <div className="w-full md:w-1/2 flex items-center justify-center p-4">
         <div className="w-full h-auto rounded-xl overflow-hidden">
@@ -42,7 +42,7 @@ export default function Card({ id, title, description, image }: CardProps) {
             isEven
               ? "bg-white text-black hover:bg-gray-100"
               : "bg-[#B2DC18] text-white"
-          } hover:scale-105 active:scale-95 transition-all duration-300`}
+          } cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300`}
         >
           Learn More <FaArrowRight size={12} />
         </button>

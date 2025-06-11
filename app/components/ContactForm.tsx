@@ -1,14 +1,16 @@
 import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
-const ContactSection = () => {
+const ContactForm = () => {
   return (
     <section className="w-full flex gap-5 flex-col md:flex-row p-6 md:py-16">
-      <div className="flex flex-col md:flex-row gap-10 p-6 rounded-xl shadow-md bg-white">
+      <div className="flex flex-col md:flex-row gap-10 px-10 p-6 rounded-xl shadow-md bg-white">
         {/* Left Form Section */}
         <div className="flex-1">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">Send us a message</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+            Send us a message
+          </h2>
           <form className="space-y-5">
             <div className="flex flex-col md:flex-row gap-4">
               <input
@@ -39,20 +41,24 @@ const ContactSection = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-[#B2DC18] text-white font-semibold rounded-md transition"
+              className="w-full px-6 py-3 bg-[#B2DC18] text-white font-semibold rounded-md cursor-pointer hover:scale-105 transition-all"
             >
               Send Message
             </button>
           </form>
         </div>
-        </div>
+      </div>
 
-        <div className="w-1/2 max-w-6xl mx-auto flex flex-col md:flex-row gap-10 p-3 rounded-xl">
+      <div className="w-1/2 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 p-3 rounded-xl">
         {/* Right Info Section */}
         <div className="flex-1">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">Get in Touch</h2>
-          <p className="text-gray-600 mb-6">
-            Looking for help with your tax return or payroll? Or maybe you&apos;re interested in full accounting services. Whatever you need, we’re here to help you get on with business.
+          <h2 className="text-2xl md:text-3xl text-center font-semibold mb-6">
+            Get in Touch
+          </h2>
+          <p className="text-gray-600 text-1xl mb-6 text-center">
+            Looking for help with your tax return or payroll? Or maybe
+            you&apos;re interested in full accounting services. Whatever you
+            need, we’re here to help you get on with business.
           </p>
 
           <div className="space-y-4 mb-6">
@@ -71,7 +77,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-medium">Mail ID</p>
-                <p className="text-gray-600 text-sm">reception@malikaziz.com.au</p>
+                <p className="text-gray-600 text-sm">
+                  reception@malikaziz.com.au
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -80,7 +88,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-medium">Location</p>
-                <p className="text-gray-600 text-sm">PO Box 795 Labrador, Qld 4215</p>
+                <p className="text-gray-600 text-sm">
+                  PO Box 795 Labrador, Qld 4215
+                </p>
               </div>
             </div>
           </div>
@@ -89,20 +99,32 @@ const ContactSection = () => {
           <div>
             <p className="font-medium mb-2">Follow Our Social Media</p>
             <div className="flex gap-4">
-                <div className="h-8 w-8 bg-[#B2DC18] rounded-full">
-            <Image src="/facebook.svg" alt="Facebook" width={13} height={10} className="relative top-1.5 place-self-center "/></div>
-            <div className="h-8 w-8 bg-white rounded-full">
-              <Image src="/instagram.svg" alt="Instagram" width={20} height={20} className="relative top-1 place-self-center"/></div>
-              <div className="h-8 w-8 bg-[#B2DC18] rounded-full">
-              <Image src="/linkedin.svg" alt="LinkedIn" width={20} height={20} className="relative top-1 place-self-center"/></div>
-              <div className="h-8 w-8 bg-white rounded-full">
-              <Image src="/twitter.svg" alt="Twitter" width={20} height={20} className="relative top-1 place-self-center"/></div>
+              <div className="flex items-start gap-3">
+                <div className="cursor-pointer bg-[#B2DC18] p-2 rounded-full text-white">
+                  <Facebook size={20} />
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="cursor-pointer bg-white p-2 rounded-full text-white">
+                <Instagram size={20} color="black"/>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="cursor-pointer bg-[#B2DC18] p-2 rounded-full text-white">
+                <Linkedin size={20}/>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="cursor-pointer bg-white p-2 rounded-full text-white">
+                  <Twitter size={20} color="black" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   );
 };
 
-export default ContactSection;
+export default ContactForm;

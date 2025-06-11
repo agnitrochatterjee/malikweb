@@ -55,7 +55,7 @@ const blogData = [
 
 export default function HomePage() {
   return (
-    <div className="px-4 md:px-20 py-10">
+    <div className="flex flex-col w-full px-4 md:px-20 py-10">
       <h2 className="text-center text-5xl font-base mb-10 text-black">Blog</h2>
       <div className="grid gap-6 md:grid-cols-3">
         {blogData.map((card, index) => (
@@ -64,7 +64,7 @@ export default function HomePage() {
 
       </div>
       <div className="flex justify-center mt-10">
-        <button className="bg-[#B2DC18] text-white px-6 py-2 rounded-[10px] font-medium text-sm flex items-center gap-2">
+        <button className="bg-[#B2DC18] text-white px-6 py-2 rounded-[10px] font-medium text-sm flex items-center gap-2 cursor-pointer hover:scale-105 transition-all">
           See More →
         </button>
       </div>

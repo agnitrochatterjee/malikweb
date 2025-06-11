@@ -70,9 +70,9 @@ const poppins = Poppins({
 const page = () => {
   return (
     <div>
-    <div className={`overflow-hidden ${poppins.className}`}>
-    <h1 className='text-5xl py-5 font-base place-self-center'>Our Services</h1>
-    <p className='px-10 mt-3'>At Malik Aziz & Co., we offer a full range of accounting services to help you achieve financial success. From bookkeeping and tax planning to business advisory and SMSF management, we provide personalized solutions for individuals and businesses alike.</p>
+    <div className={`min-w-screen overflow-hidden`}>
+    <h1 className='text-5xl py-5 font-base text-center'>Our Services</h1>
+    <p className='px-10 mt-3 text-center'>At Malik Aziz & Co., we offer a full range of accounting services to help you achieve financial success. From bookkeeping and tax planning to business advisory and SMSF management, we provide personalized solutions for individuals and businesses alike.</p>
 
     <div className='w-full max-w-7xl px-5 py-10 mx-auto'>
      {data.map((item) => (

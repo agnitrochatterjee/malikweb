@@ -61,7 +61,7 @@ const Main = () => {
       <FAQSection />
       <TrustSection />
       <Testimonials />
-       <section className="py-16 px-4 bg-gray-50">
+       <section className="py-16 px-4">
       <h2 className="text-4xl font-semibold text-[#000000] text-center">Latest News & Publications</h2>
       <div className="space-y-10 mt-10">
   {publications.map((item) => (
@@ -71,7 +71,7 @@ const Main = () => {
 
       <div className="text-center mt-4">
         <button
-          className="bg-[#B2DC18] text-white font-medium px-6 py-2 rounded flex items-center gap-2 mx-auto"
+          className="bg-[#B2DC18] text-white font-medium px-6 py-2 rounded flex items-center gap-2 mx-auto cursor-pointer"
         >
           See More <span className="text-xl">→</span>
         </button>

@@ -27,7 +27,7 @@ export const WhyChoose: React.FC<WhyChooseProps> = ({
             <div
               key={idx}
               className={clsx(
-                "relative rounded-xl shadow p-6 transition duration-300 min-h-[240px] flex flex-col items-center justify-center",
+                "relative rounded-xl shadow p-6 transition duration-300 min-h-[240px] flex flex-col items-center justify-center hover:scale-105 transition-all",
                 isGreen ? "bg-[#B2DC18]" : "bg-white"
               )}
             >

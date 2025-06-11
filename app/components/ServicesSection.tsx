@@ -18,7 +18,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   onSeeMore,
 }) => {
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="max-w-8xl mx-auto py-16 px-4">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900">Our Services</h2>
@@ -36,7 +36,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             <div
               key={idx}
               className={clsx(
-                "relative rounded-xl shadow p-6 transition duration-300 min-h-[240px] flex flex-col items-center justify-center",
+                "relative rounded-xl shadow p-6 hover:scale-105 transition-all duration-300 min-h-[240px] flex flex-col items-center justify-center",
                 isGreen ? "bg-[#B2DC18]" : "bg-white"
               )}
             >
@@ -74,7 +74,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         <div className="text-center mt-8">
           <button
             onClick={onSeeMore}
-            className="bg-[#B2DC18] text-white font-medium px-6 py-2 rounded flex items-center gap-2 mx-auto"
+            className="bg-[#B2DC18] text-white font-medium px-6 py-2 rounded flex items-center gap-2 mx-auto cursor-pointer"
           >
             See More <span className="text-xl">→</span>
           </button>

@@ -18,7 +18,7 @@ const InfoBanner: React.FC = () => {
           WANT MORE <br />
           INFORMATION?
         </h2>
-        <button className="mt-6 bg-[#B2DC18] text-black font-medium px-5 py-2 rounded w-[160px] h-[40px] text-[15px]">
+        <button className="mt-6 bg-[#B2DC18] text-black font-medium px-5 py-2 rounded w-[160px] h-[40px] text-[15px] cursor-pointer">
           Book a Meeting
         </button>
       </div>
