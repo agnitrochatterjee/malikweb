@@ -38,13 +38,13 @@ const page = () => {
   return (
     <div className='min-w-screen flex flex-col items-center p-5'>
       <div className={`overflow-hidden`}>
-    <h1 className='text-5xl font-base text-center'>About Us</h1>
-    <div className='flex flex-col text-center'>
+    <h1 className='text-5xl font-semibold text-center'>About Us</h1>
+    <div className='max-w-6xl mx-auto flex flex-col text-center'>
     <p className='text-lg mt-3'>Top quality accounting services for your business</p>
-    <p className='text-lg px-10 mt-3'>With 10 years of experience, we work with companies of all sizes, and in all industries. We are dedicated to handling all tax issues swiftly and accurately, so that you can focus on what really matters to your business.</p>
+    <p className='text-lg px-10 mt-3 text-black/60'>With 10 years of experience, we work with companies of all sizes, and in all industries. We are dedicated to handling all tax issues swiftly and accurately, so that you can focus on what really matters to your business.</p>
     </div>
 
-    <div className='w-full max-w-7xl px-5 py-10 mx-auto'>
+    <div className='w-full max-w-7xl mx-auto px-5 py-10 mx-auto'>
      {data.map((item) => (
       <Publication 
         key={item.id}
@@ -56,8 +56,8 @@ const page = () => {
      ))}
       </div>
 
-      <h1 className='text-5xl text-center'>Why Choose Us?</h1>
-    <p className='text-lg px-10 mt-3 text-center'>We pride ourselves on our commitment to excellence and personalized service. We stay up-to-date with the latest industry trends and regulations, ensuring you receive the most accurate and relevant advice.</p>
+      <h1 className='text-5xl text-center font-semibold'>Why Choose Us?</h1>
+    <p className='max-w-5xl mx-auto text-lg px-10 mt-3 text-center'>We pride ourselves on our commitment to excellence and personalized service. We stay up-to-date with the latest industry trends and regulations, ensuring you receive the most accurate and relevant advice.</p>
 
      <WhyChoose services={services}/>
     </div>

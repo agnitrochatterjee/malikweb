@@ -48,7 +48,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto my-10 p-4 flex flex-col md:flex-row gap-6 font-poppins bg-white">
+    <section className="max-w-6xl mx-auto my-10 p-4 flex flex-col md:flex-row gap-6 font-poppins">
       <div ref={leftRef} className="md:w-1/2 space-y-6">
         <h2 className="text-4xl md:text-5xl text-gray-900">
           We have experts in a range of industries including:
@@ -72,7 +72,7 @@ const FAQSection = () => {
                 className={`rounded-lg p-4 transition-all duration-300 cursor-pointer border ${
                   isActive
                     ? "bg-[#B2DC18] text-white border-[#B2DC18]"
-                    : "bg-white text-black border-gray-300"
+                    : "text-black border-gray-300"
                 }`}
               >
                 <div className="flex justify-between items-center font-semibold">

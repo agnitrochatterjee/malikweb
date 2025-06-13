@@ -61,7 +61,7 @@ const Main = () => {
       <FAQSection />
       <TrustSection />
       <Testimonials />
-       <section className="py-16 px-4">
+       <section className="py-16 md:px-4">
       <h2 className="text-4xl font-semibold text-[#000000] text-center">Latest News & Publications</h2>
       <div className="space-y-10 mt-10">
   {publications.map((item) => (

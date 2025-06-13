@@ -26,9 +26,7 @@ export default function Card({ id, title, description, image }: CardProps) {
           <Image
             src={image}
             alt={title}
-            width={600}
-            height={300}
-            className="w-full h-auto object-cover rounded-xl"
+            className="h-auto object-cover rounded-xl"
           />
         </div>
       </div>

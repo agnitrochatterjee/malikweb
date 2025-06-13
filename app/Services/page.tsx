@@ -64,11 +64,11 @@ import CardImage8 from '../assets/CardImage8.jpg';
 const page = () => {
   return (
     <div>
-    <div className={`min-w-screen overflow-hidden`}>
-    <h1 className='text-5xl py-5 font-base text-center'>Our Services</h1>
-    <p className='px-10 mt-3 text-center'>At Malik Aziz & Co., we offer a full range of accounting services to help you achieve financial success. From bookkeeping and tax planning to business advisory and SMSF management, we provide personalized solutions for individuals and businesses alike.</p>
+    <div className={`min-w-screen flex flex-col`}>
+    <h1 className='text-5xl py-5 font-semibold text-center'>Our Services</h1>
+    <p className='max-w-4xl mx-auto px-10 mt-3 text-center'>At Malik Aziz & Co., we offer a full range of accounting services to help you achieve financial success. From bookkeeping and tax planning to business advisory and SMSF management, we provide personalized solutions for individuals and businesses alike.</p>
 
-    <div className='w-full max-w-7xl px-5 py-10 mx-auto'>
+    <div className='w-full max-w-7xl mx-auto md:px-5 py-10 mx-auto'>
      {data.map((item) => (
       <Card 
         key={item.id}

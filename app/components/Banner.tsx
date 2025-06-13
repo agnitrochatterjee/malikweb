@@ -11,10 +11,10 @@ export const Banner = () => {
         alt="Banner Background"
         fill
         priority
-        className="object-cover object-center"
+        className="w-full h-auto object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-white/0 z-10" />
-      <div className="absolute inset-0 z-20 flex flex-col justify-center px-6 md:px-24 max-w-3xl">
+      <div className="absolute inset-0 z-20 flex flex-col justify-center md:px-24 max-w-3xl">
         <h1 className="text-white text-3xl md:text-4xl font-semibold leading-snug">
           Simplifying Your Finances,<br />
           Empowering Your Future

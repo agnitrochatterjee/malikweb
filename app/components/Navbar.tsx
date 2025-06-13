@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-white">
-      <div className={`min-w-screen flex flex-wrap p-4 justify-around`}>
+      <div className={`min-w-screen flex flex-wrap gap-50 p-4 justify-around`}>
         {/* Logo Section */}
         <Image
           src="MalikAziz.svg"
@@ -51,80 +51,58 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="hidden lg:flex gap-3 py-2">
-          <Image
-            className="relative top-2 w-[20px] h-[20px] cursor-pointer"
-            src="call.svg"
-            alt="call icon"
-            width={100}
-            height={100}
-          />
           <p className="mt-1">0449779218</p>
           <button className="rounded-lg w-[120px] h-[35px] item-center text-[12px] bg-[#B2DC18] text-black cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300">
             Book a Meeting
           </button>
-          <Image
-            className="relative w-[30px] h-[30px] cursor-pointer"
-            src="search1.svg"
-            alt="`search icon"
-            width={100}
-            height={100}
-          />
         </div>
 
         {/* Hamburger Logo */}
         <div className="lg:hidden flex gap-4">
-        <Image
-              className="relative top-2 w-[30px] h-[30px] cursor-pointer"
-              src="search1.svg"
-              alt="`search icon"
-              width={100}
-              height={100}
-            />
           <button onClick={() => setMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? (
-              <HiOutlineX size={30} />
-            ) : (
-              <HiOutlineMenu size={30} />
-            )}
+            <HiOutlineMenu size={30} />
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-3">
+      {/* {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-40 z-40"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )} */}
+
+      {/* Sidebar Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[250px] bg-white z-50 transform transition-all duration-300 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <div className="flex justify-between items-center p-4 border-b">
+          <h2 className="text-xl font-base">Menu</h2>
+          <button onClick={() => setMenuOpen(false)}>
+            <HiOutlineX size={30} />
+          </button>
+        </div>
+
+        {/* Sidebar Links */}
+        <ul className="flex flex-col ml-5 gap-3 text-lg">
           {NavBarItems.map((item) => (
-            <div
+            <li
               key={item.path}
               onClick={() => Router.push(`${item.path}`)}
-              className={`cursor-pointer text-sm ${
-                pathname === item.path
+              className={`py-3 relative cursor-pointer ${
+                pathname === `${item.path}`
                   ? "text-[#B2DC18]"
                   : "text-black hover:text-[#B2DC18]"
               }`}
             >
               {item.name}
-            </div>
+            </li>
           ))}
-
-          <div className="flex justify-around gap-3 px-5 py-2">
-            <div className="flex gap-3">
-            <Image
-              className="relative top-2 w-[20px] h-[20px] cursor-pointer"
-              src="call.svg"
-              alt="call icon"
-              width={100}
-              height={100}
-            />
-            <p className="mt-1">0449779218</p>
-            </div>
-            <button className="rounded-lg w-[120px] h-[35px] item-center text-[12px] bg-[#B2DC18] text-black cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300">
-              Book a Meeting
-            </button>
-            
-          </div>
-        </div>
-      )}
+        </ul>
+      </div>
     </div>
   );
 };
