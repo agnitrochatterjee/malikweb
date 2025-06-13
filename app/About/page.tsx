@@ -57,7 +57,7 @@ const page = () => {
       </div>
 
       <h1 className='text-5xl text-center'>Why Choose Us?</h1>
-    <p className='text-lg px-10 mt-3'>We pride ourselves on our commitment to excellence and personalized service. We stay up-to-date with the latest industry trends and regulations, ensuring you receive the most accurate and relevant advice.</p>
+    <p className='text-lg px-10 mt-3 text-center'>We pride ourselves on our commitment to excellence and personalized service. We stay up-to-date with the latest industry trends and regulations, ensuring you receive the most accurate and relevant advice.</p>
 
      <WhyChoose services={services}/>
     </div>

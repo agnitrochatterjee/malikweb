@@ -42,7 +42,7 @@ export const WhyChoose: React.FC<WhyChooseProps> = ({
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-semibold mb-4 text-black">
+              <h3 className="text-2xl font-semibold mb-4 text-black text-center">
                 {service.title}
               </h3>
 

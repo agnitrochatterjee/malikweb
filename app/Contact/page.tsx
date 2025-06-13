@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div className="min-w-screen flex flex-col">
       <h1 className='text-5xl py-5 text-center font-base'>Contact Us</h1>
-      <p className='px-5 text-center'>Curious about how we can help with your finances? Reach out to our team today. We specialize in SMSF management, business advisory, tax accounting, and more. No matter if you&apos;re an individual or a business, we offer customized solutions to fit your financial needs. Contact us by phone or email to begin your journey toward financial success.</p>
+      <p className='px-5 lg:px-40 text-center'>Curious about how we can help with your finances? Reach out to our team today. We specialize in SMSF management, business advisory, tax accounting, and more. No matter if you&apos;re an individual or a business, we offer customized solutions to fit your financial needs. Contact us by phone or email to begin your journey toward financial success.</p>
 
       {/* Form Content */}
       {/* <div className='px-5 py-10'>

@@ -3,8 +3,8 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "luc
 
 const ContactForm = () => {
   return (
-    <section className="w-full flex gap-5 flex-col md:flex-row p-6 md:py-16">
-      <div className="flex flex-col md:flex-row gap-10 px-10 p-6 rounded-xl shadow-md bg-white">
+    <section className="w-full flex gap-5 flex-col md:flex-row py-5 lg:px-40 lg:py-16">
+      <div className="w-1/2 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-10 p-6 rounded-xl shadow-md bg-white">
         {/* Left Form Section */}
         <div className="flex-1">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">
