@@ -1,23 +1,56 @@
+"use client";
+
 import React from "react";
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  const formData = new FormData(event.currentTarget);
+  const data = {
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    message: formData.get("message"),
+  };
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send message");
+    }
+
+    alert("Message sent successfully!");
+  } catch (error) {
+    console.error(error);
+    alert("There was an error sending your message. Please try again later.");
+  }
+}
+
 const ContactForm = () => {
   return (
-    <section className="max-w-5xl mx-auto flex gap-12 flex-col md:flex-row py-5 md:py-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 p-6 md:px-10 md:p-13 rounded-xl shadow-md bg-white">
+    <section className="max-w-5xl mx-auto flex gap-12 flex-col md:flex-row py-5 md:py-10 sm:px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 p-6 md:px-10 md:p-13 rounded-xl shadow-md bg-white">
         {/* Left Form Section */}
         <div className="flex-1">
           <h2 className="text-2xl md:text-3xl font-base mb-6">
             Send us a message
           </h2>
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row gap-4">
                 <div>
             <p className="mb-2">First Name</p>
               <input
                 type="text"
                 placeholder="John"
-                className="flex-1 p-3 bg-[#F4F4F4] rounded-md focus:outline-none"
+                className="flex-1 p-3 bg-[#F4F4F4] rounded-lg focus:outline-none"
               />
               </div>
 
@@ -27,7 +60,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 placeholder="Doe"
-                className="flex-1 p-3 bg-[#F4F4F4] rounded-md focus:outline-none"
+                className="flex-1 p-3 bg-[#F4F4F4] rounded-lg focus:outline-none"
               />
               </div>
             </div>
@@ -37,7 +70,7 @@ const ContactForm = () => {
             <input
               type="email"
               placeholder="JohnDoe@gmail.com"
-              className="w-full p-3 bg-[#F4F4F4] rounded-md focus:outline-none"
+              className="w-full p-3 bg-[#F4F4F4] rounded-lg focus:outline-none"
             />
             </div>
 
@@ -46,7 +79,7 @@ const ContactForm = () => {
             <input
               type="tel"
               placeholder="123-456-7890"
-              className="w-full p-3 bg-[#F4F4F4] rounded-md focus:outline-none"
+              className="w-full p-3 bg-[#F4F4F4] rounded-lg focus:outline-none"
             />
             </div>
 
@@ -55,12 +88,12 @@ const ContactForm = () => {
             <textarea
               rows={4}
               placeholder="Message..."
-              className="w-full p-3 bg-[#F4F4F4] rounded-md focus:outline-none"
+              className="w-full p-3 bg-[#F4F4F4] rounded-lg focus:outline-none"
             ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-[#B2DC18] text-white font-semibold rounded-md cursor-pointer hover:scale-105 transition-all"
+              className="w-full px-6 py-3 bg-[#B2DC18] text-white font-semibold rounded-lg cursor-pointer hover:scale-105 transition-all"
             >
               Send Message
             </button>
