@@ -4,7 +4,7 @@ import Banner from "../assets/Banner.jpg";
 
 const InfoBanner: React.FC = () => {
   return (
-    <div className="relative max-w-5xl mx-auto h-60 rounded-xl overflow-hidden mb-10">
+    <div className="relative max-w-6xl mx-auto h-60 rounded-xl overflow-hidden mb-10">
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{

@@ -1,8 +1,7 @@
-
 "use client";
 
 import Image from "next/image";
-import Testimonial1 from "../assets/testinomial-3.jpg";
+import Testimonial1 from "../assets/Testinomial-1.jpeg";
 import Testimonial2 from "../assets/testinomial-2.jpg";
 import Testimonial3 from "../assets/testinomial-1.jpg";
 
@@ -32,11 +31,12 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-12">
-      <h2 className="text-3xl font-semibold text-center text-[#000000] mb-10">
+    <section className="py-12 max-w-7xl mx-auto w-full px-4 md:px-6">
+      <h2 className="text-3xl font-semibold text-left md:text-center text-[#000000] mb-10">
         Testimonials
       </h2>
-      <div className="flex flex-wrap justify-center gap-6 px-4">
+
+      <div className="flex flex-wrap justify-center gap-6">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
@@ -55,14 +55,16 @@ const Testimonials = () => {
                   className="rounded-full object-cover"
                 />
               </div>
-              </div>
-              <h3
-                className={`font-100 text-[25px] mb-3 ${
-                  testimonial.highlight ? "text-black" : "text-gray-900"
-                }`}
-              >
-                {testimonial.name}
-              </h3>
+            </div>
+
+            <h3
+              className={`font-100 text-[25px] mb-3 ${
+                testimonial.highlight ? "text-black" : "text-gray-900"
+              }`}
+            >
+              {testimonial.name}
+            </h3>
+
             <p
               className={`text-sm ${
                 testimonial.highlight ? "text-white" : "text-gray-700"

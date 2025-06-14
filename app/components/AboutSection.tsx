@@ -5,7 +5,7 @@ import aboutImage from "../assets/AboutImage.jpg";
 
 export const AboutSection = () => {
   return (
-    <section className="w-full py-16 px-5 md:px-24">
+    <section className="w-full py-16 px-6 md:px-24">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className="flex-1">
           <p className="text-sm font-semibold text-black mb-2">Who We Are</p>
@@ -28,7 +28,7 @@ export const AboutSection = () => {
             <Image
               src={aboutImage}
               alt="Financial expert teaching"
-              width={600}
+              width={500}
               height={400}
               className="object-cover"
             />

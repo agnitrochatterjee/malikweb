@@ -64,7 +64,7 @@ import CardImage8 from '../assets/CardImage8.jpg';
 const page = () => {
   return (
     <div>
-    <div className={`min-w-screen flex flex-col`}>
+    <div className={`min-w-screen flex flex-col px-3`}>
     <h1 className='text-5xl py-5 font-semibold text-center'>Our Services</h1>
     <p className='max-w-4xl mx-auto px-10 mt-3 text-center'>At Malik Aziz & Co., we offer a full range of accounting services to help you achieve financial success. From bookkeeping and tax planning to business advisory and SMSF management, we provide personalized solutions for individuals and businesses alike.</p>
 

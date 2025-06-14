@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 
@@ -21,9 +20,8 @@ const Publication: React.FC<PublicationProps> = ({
     <div
       className={`flex flex-col md:flex-row ${
         isEven ? "bg-[#B2DC18] text-white" : "bg-white text-black"
-      } ${
-        !isEven ? "md:flex-row-reverse" : ""
-      } rounded-2xl shadow w-full max-w-6xl mx-auto mb-10 p-6`}
+      } ${!isEven ? "md:flex-row-reverse" : ""} 
+      rounded-2xl shadow w-full max-w-5xl mx-auto mb-10 p-6`}
     >
       <div className="w-full md:w-1/2 flex items-center justify-center p-4">
         <div className="w-full h-auto rounded-xl overflow-hidden">
@@ -35,9 +33,11 @@ const Publication: React.FC<PublicationProps> = ({
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 mt-12 flex-1 flex-col justify-center p-4">
-        <h2 className="text-5xl mb-4">{title}</h2>
-        <p className="mb-6 text-base">{description}</p>
+      <div className="w-full md:w-1/2 flex items-center justify-center p-4 md:ml-5">
+        <div className="flex flex-col items-start">
+          <h2 className="text-4xl mt-5 mb-4">{title}</h2>
+          <p className="mb-6 text-lg">{description}</p>
+        </div>
       </div>
     </div>
   );

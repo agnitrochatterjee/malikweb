@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-white">
-      <div className={`min-w-screen flex flex-wrap gap-50 p-4 justify-around`}>
+      <div className={`min-w-screen flex gap-40 p-4 justify-around`}>
         {/* Logo Section */}
         <Image
           src="MalikAziz.svg"

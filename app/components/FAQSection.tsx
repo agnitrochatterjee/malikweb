@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Banner from "../assets/Banner.jpg";
 
@@ -34,23 +34,16 @@ const servicesData: ServiceItem[] = [
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const leftRef = useRef<HTMLDivElement>(null);
-  const rightRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (leftRef.current && rightRef.current) {
-      rightRef.current.style.height = `${leftRef.current.offsetHeight}px`;
-    }
-  }, [activeIndex]);
 
   const toggleIndex = (index: number) => {
     setActiveIndex(index === activeIndex ? -1 : index);
   };
 
   return (
-    <section className="max-w-6xl mx-auto my-10 p-4 flex flex-col md:flex-row gap-6 font-poppins">
-      <div ref={leftRef} className="md:w-1/2 space-y-6">
-        <h2 className="text-4xl md:text-5xl text-gray-900">
+    <section className="max-w-6xl mx-auto my-10 p-4 flex flex-col md:flex-row gap-6 font-poppins bg-[#f4f4f4]">
+      {/* Left Section */}
+      <div className="md:w-1/2 flex flex-col justify-center space-y-6 md:mr-5">
+        <h2 className="text-3xl md:text-5xl text-gray-900">
           We have experts in a range of industries including:
         </h2>
         <p className="text-gray-700">
@@ -72,12 +65,14 @@ const FAQSection = () => {
                 className={`rounded-lg p-4 transition-all duration-300 cursor-pointer border ${
                   isActive
                     ? "bg-[#B2DC18] text-white border-[#B2DC18]"
-                    : "text-black border-gray-300"
+                    : "bg-[#f4f4f4] text-black border-gray-300"
                 }`}
               >
                 <div className="flex justify-between items-center font-semibold">
-                  <span>{item.title}</span>
-                  <span className="text-2xl">{isActive ? "−" : "+"}</span>
+                  <span className="text-black">{item.title}</span>
+                  <span className="text-2xl text-black">
+                    {isActive ? "−" : "+"}
+                  </span>
                 </div>
                 {isActive && (
                   <p className="mt-2 text-sm transition-all">{item.content}</p>
@@ -89,8 +84,8 @@ const FAQSection = () => {
       </div>
 
       {/* Right Section */}
-      <div ref={rightRef} className="md:w-1/2 flex items-stretch">
-        <div className="w-full ml-10 h-full rounded-xl overflow-hidden shadow-lg">
+      <div className="md:w-1/2 flex items-center justify-center md:items-stretch md:ml-5">
+        <div className="w-full h-[200px] md:h-auto rounded-xl overflow-hidden shadow-lg">
           <Image
             src={Banner}
             alt="Accounting Expert"

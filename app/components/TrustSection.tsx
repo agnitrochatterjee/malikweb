@@ -20,16 +20,19 @@ const features = [
 
 const TrustSection = () => {
   return (
-    <section className="py-12 px-6 md:px-16 lg:px-32">
+    <section className="py-12 px-4 sm:px-6 md:px-12 lg:px-32">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        <div className="flex-shrink-0 w-full md:w-1/2 rounded-lg shadow-lg overflow-hidden">
+        {/* Left Image */}
+        <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
           <Image
             src={TrustImage}
             alt="Office discussion"
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover max-h-[400px] md:max-h-full"
           />
         </div>
-        <div className="flex-1 space-y-6">
+
+        {/* Right Content */}
+        <div className="flex-1 space-y-6 text-left">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug">
             Trust is the <br /> foundation of <br /> great service
           </h2>
@@ -40,7 +43,9 @@ const TrustSection = () => {
             are tailored to the unique needs of each client. We work as part of
             your team, understanding your needs and what matters to you.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-6 max-w-md">
+
+          {/* Feature Icons */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-6 gap-x-4 max-w-md">
             {features.map(({ label, icon, active }) => (
               <div key={label} className="flex items-center gap-3">
                 <span
